@@ -1,0 +1,24 @@
+{
+    "id": "A01253ED",
+    "path": "~/Dropbox/work/RAutoDiff/package/RAutoDiff/R/rad_core.R",
+    "project_path": "R/rad_core.R",
+    "type": "r_source",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1616593867469.0,
+    "source_on_save": false,
+    "relative_order": 6,
+    "properties": {
+        "cursorPosition": "609,0",
+        "scrollLine": "598"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1616675798,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1616675798722,
+    "read_only": false,
+    "read_only_alternatives": []
+}

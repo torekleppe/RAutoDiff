@@ -1,0 +1,8 @@
+"0","x <- 3.0 # value where we wish to evaluate function"
+"0","x.a <- independent2(x) # set independent value (allowing for first and second derivatives)"
+"0","f.a <- 0.5*x.a^2 # evaluate function (note using output of independent*() as input)"
+"0","print(paste0(""value of function"",value(f.a))) "
+"1","[1]"
+"1"," ""value of function4.5"""
+"1","
+"

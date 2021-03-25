@@ -1,0 +1,24 @@
+{
+    "id": "857CA21C",
+    "path": "~/Dropbox/work/RAutoDiff/package/RAutoDiff/R/rad_matrix.R",
+    "project_path": "R/rad_matrix.R",
+    "type": "r_source",
+    "hash": "2163340263",
+    "contents": "",
+    "dirty": false,
+    "created": 1616587259190.0,
+    "source_on_save": false,
+    "relative_order": 5,
+    "properties": {
+        "cursorPosition": "16,69",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1616674970,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1616674970523,
+    "read_only": false,
+    "read_only_alternatives": []
+}
