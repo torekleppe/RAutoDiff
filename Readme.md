@@ -8,8 +8,7 @@ Easy to use first and second order Automatic Differentiation (AD) based on forwa
 ### Install
 To install the package, run the line
 ```
-devtools::install_github("https://github.com/torekleppe/RAutoDiff",
-,build_vignettes=TRUE)
+devtools::install_github("https://github.com/torekleppe/RAutoDiff",build_vignettes=TRUE)
 ```
 in the R console.
 
