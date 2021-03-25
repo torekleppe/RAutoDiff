@@ -3,6 +3,8 @@
 Easy to use first and second order Automatic Differentiation (AD) based on forward mode AD and operator overloading. The package is mainly intended for algorithm prototyping and smaller problems, and not really for production code.
  
 
+**Notice:** so far, only a small subset of all the available functions in R have been overloaded to work with the the package.
+
 ### Install
 To install the package, run the line
 ```
