@@ -14,7 +14,7 @@ devtools::install_github("https://github.com/torekleppe/RAutoDiff",
 in the R console.
 
 ### Documentation
-The documentation is mainly contained in two vignettes: A "getting started guide":
+The documentation is mainly contained in two vignettes: A "getting started guide" (which after installing the package is available by running in the R console):
 ```
 vignette("introduction",package="RAutoDiff")
 ```
