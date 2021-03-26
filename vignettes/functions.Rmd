@@ -54,9 +54,10 @@ print(m@ncol)
 print(m@vals) 
 ```
 
-In general, calculation with `fAD`-types is somewhat faster (close to fully vectorized) that for `fAD2` (several functions have for-loops), and hence `fAD2` should be avoided if you do not need second derivatives. 
+In general, calculation with `fAD`-types is somewhat faster (close to fully vectorized) than for `fAD2` (several functions have for-loops), and hence `fAD2` should be avoided if you do not need second derivatives. 
 
 ## Creation and extraction
+
 ### Creating AD types
 
 * `independent()` creates an `fAD` with values equal to the arguement and Jacobian equal to the identity
