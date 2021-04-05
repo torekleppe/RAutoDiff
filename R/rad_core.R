@@ -588,6 +588,29 @@ setMethod("square",c("fAD2"),function(x){
 })
 
 
+setMethod("sin",c("fAD"),function(x){
+  new("fAD",val=sin(x@val),jac=cos(x@val)*x@jac)
+})
+setMethod("sin",c("fAD2"),function(x){
+  t1 <- sin(x@val)
+  t2 <- cos(x@val)
+  tmp.h <- t2*x@hessian
+  for(i in 1:length(x)) tmp.h[i,,] <- tmp.h[i,,] - t1*outer(x@jac[i,],x@jac[i,])
+  return(new("fAD2",val=t1,jac=t2*x@jac,hessian=tmp.h))
+})
+
+setMethod("cos",c("fAD"),function(x){
+  new("fAD",val=cos(x@val),jac=-sin(x@val)*x@jac)
+})
+setMethod("cos",c("fAD2"),function(x){
+  t.sin <- sin(x@val)
+  t.cos <- cos(x@val)
+  tmp.h <- -t.sin*x@hessian
+  for(i in 1:length(x)) tmp.h[i,,] <- tmp.h[i,,] - t.cos*outer(x@jac[i,],x@jac[i,])
+  return(new("fAD2",val=t.cos,jac=-t.sin*x@jac,hessian=tmp.h))
+})
+
+
 #
 # reductions etc
 #
