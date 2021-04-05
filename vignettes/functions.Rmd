@@ -95,7 +95,9 @@ All of the below apply also for mixed (`numeric` and `ADtype`) class argument, e
 * `sqrt()`
 * `square()` (`square(x)` same as `x^2` but faster, also available for `numeric`)
 * `lgamma()`
-* To do: `abs()`, trigonometric, erf or pnorm, qnorm,cube
+* `sin()`, `cos()`
+* `abs()`
+* To do:  more trigonometric, erf or pnorm, qnorm,cube
 
 ### Reductions
 
@@ -128,6 +130,8 @@ Including between mixed types:
 * `sqrt()`
 * `square()` 
 * `lgamma()`
+* `sin()`, `cos()`
+* `abs()`
 
 ### Linear Algebra
 

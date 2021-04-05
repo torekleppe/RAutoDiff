@@ -186,9 +186,149 @@ setMethod("rep_len",c("fAD2","ANY"),function(x,length.out){
   }
 }
 
+#
+# binary non-numerical operations
+#
+
+
+# ==
+setMethod("==",c("fAD","fAD"),function(e1,e2){
+  return(e1@val==e2@val)
+})
+setMethod("==",c("fAD2","fAD2"),function(e1,e2){
+  return(e1@val==e2@val)
+})
+setMethod("==",c("fAD","numeric"),function(e1,e2){
+  return(e1@val==e2)
+})
+setMethod("==",c("fAD2","numeric"),function(e1,e2){
+  return(e1@val==e2)
+})
+setMethod("==",c("numeric","fAD"),function(e1,e2){
+  return(e1==e2@val)
+})
+setMethod("==",c("numeric","fAD2"),function(e1,e2){
+  return(e1==e2@val)
+})
+
+# !=
+setMethod("!=",c("fAD","fAD"),function(e1,e2){
+  return(e1@val!=e2@val)
+})
+setMethod("!=",c("fAD2","fAD2"),function(e1,e2){
+  return(e1@val!=e2@val)
+})
+setMethod("!=",c("fAD","numeric"),function(e1,e2){
+  return(e1@val!=e2)
+})
+setMethod("!=",c("fAD2","numeric"),function(e1,e2){
+  return(e1@val!=e2)
+})
+setMethod("!=",c("numeric","fAD"),function(e1,e2){
+  return(e1!=e2@val)
+})
+setMethod("!=",c("numeric","fAD2"),function(e1,e2){
+  return(e1!=e2@val)
+})
+
+
+
+
+
+#>
+setMethod(">",c("fAD","fAD"),function(e1,e2){
+  return(e1@val>e2@val)
+})
+setMethod(">",c("fAD2","fAD2"),function(e1,e2){
+  return(e1@val>e2@val)
+})
+setMethod(">",c("fAD","numeric"),function(e1,e2){
+  return(e1@val>e2)
+})
+setMethod(">",c("fAD2","numeric"),function(e1,e2){
+  return(e1@val>e2)
+})
+setMethod(">",c("numeric","fAD"),function(e1,e2){
+  return(e1>e2@val)
+})
+setMethod(">",c("numeric","fAD2"),function(e1,e2){
+  return(e1>e2@val)
+})
+
+
+#>=
+setMethod(">=",c("fAD","fAD"),function(e1,e2){
+  return(e1@val>=e2@val)
+})
+setMethod(">=",c("fAD2","fAD2"),function(e1,e2){
+  return(e1@val>=e2@val)
+})
+setMethod(">=",c("fAD","numeric"),function(e1,e2){
+  return(e1@val>=e2)
+})
+setMethod(">=",c("fAD2","numeric"),function(e1,e2){
+  return(e1@val>=e2)
+})
+setMethod(">=",c("numeric","fAD"),function(e1,e2){
+  return(e1>=e2@val)
+})
+setMethod(">=",c("numeric","fAD2"),function(e1,e2){
+  return(e1>=e2@val)
+})
+
+
+
+
+
+
+# <
+setMethod("<",c("fAD","fAD"),function(e1,e2){
+  return(e1@val<e2@val)
+})
+setMethod("<",c("fAD2","fAD2"),function(e1,e2){
+  return(e1@val<e2@val)
+})
+setMethod("<",c("fAD","numeric"),function(e1,e2){
+  return(e1@val<e2)
+})
+setMethod("<",c("fAD2","numeric"),function(e1,e2){
+  return(e1@val<e2)
+})
+setMethod("<",c("numeric","fAD"),function(e1,e2){
+  return(e1<e2@val)
+})
+setMethod("<",c("numeric","fAD2"),function(e1,e2){
+  return(e1<e2@val)
+})
+
+
+# <=
+setMethod("<=",c("fAD","fAD"),function(e1,e2){
+  return(e1@val<=e2@val)
+})
+setMethod("<=",c("fAD2","fAD2"),function(e1,e2){
+  return(e1@val<=e2@val)
+})
+setMethod("<=",c("fAD","numeric"),function(e1,e2){
+  return(e1@val<=e2)
+})
+setMethod("<=",c("fAD2","numeric"),function(e1,e2){
+  return(e1@val<=e2)
+})
+setMethod("<=",c("numeric","fAD"),function(e1,e2){
+  return(e1<=e2@val)
+})
+setMethod("<=",c("numeric","fAD2"),function(e1,e2){
+  return(e1<=e2@val)
+})
+
+
+
+
+
 
 #
-# binary operations
+# binary numerical operations
 #
 
 
@@ -610,6 +750,12 @@ setMethod("cos",c("fAD2"),function(x){
   return(new("fAD2",val=t.cos,jac=-t.sin*x@jac,hessian=tmp.h))
 })
 
+
+.AD_abs_core <- function(x){
+  return((-1+2*as.numeric(x@val>=0))*x)
+}
+setMethod("abs",c("fAD"),.AD_abs_core)
+setMethod("abs",c("fAD2"),.AD_abs_core)
 
 #
 # reductions etc

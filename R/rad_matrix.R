@@ -344,6 +344,18 @@ setMethod("lgamma",c("AD_matrix"),
           function(x){
             return(new("AD_matrix",nrow=x@nrow,ncol=x@ncol,vals=lgamma(x@vals)))
           })
+setMethod("sin",c("AD_matrix"),
+          function(x){
+            return(new("AD_matrix",nrow=x@nrow,ncol=x@ncol,vals=sin(x@vals)))
+          })
+setMethod("cos",c("AD_matrix"),
+          function(x){
+            return(new("AD_matrix",nrow=x@nrow,ncol=x@ncol,vals=cos(x@vals)))
+          })
+setMethod("abs",c("AD_matrix"),
+          function(x){
+            return(new("AD_matrix",nrow=x@nrow,ncol=x@ncol,vals=abs(x@vals)))
+          })
 
 #' @export
 setMethod("square",c("AD_matrix"),
