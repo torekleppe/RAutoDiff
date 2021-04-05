@@ -86,7 +86,7 @@ All of the below apply also for mixed (`numeric` and `ADtype`) class argument, e
 
 ### Binary non-numerical
 
-* Todo: `>`, `>=` and so on
+* `==`, `!=` `>`, `>=`, `<`, `<=`
 
 ### Unary numerical
 
