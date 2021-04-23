@@ -21,6 +21,11 @@ setMethod("dim",c("AD_matrix"),function(x){return(c(x@nrow,x@ncol))})
              vals=.ADtype.zeros(nrow*ncol,type)))
 }
 
+setMethod("as.vector",c("AD_matrix"),function(x){
+  return(x@vals)
+})
+
+
 # #' @export
 #fAD_matrix.zeros <- function(nrow=1,ncol=1){
 #  return(new("AD_matrix",nrow=as.integer(nrow),ncol=as.integer(ncol),vals=fAD.zeros(nrow*ncol)))

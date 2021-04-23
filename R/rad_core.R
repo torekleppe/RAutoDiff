@@ -25,6 +25,13 @@ setMethod("show",c("fAD2"),function(object){
 })
 
 
+setMethod("as.vector",c("fAD"),function(x){
+  return(x)
+})
+setMethod("as.vector",c("fAD2"),function(x){
+  return(x)
+})
+
 setMethod("length",c("fAD"),function(x){return(length(x@val))})
 setMethod("length",c("fAD2"),function(x){return(length(x@val))})
 
